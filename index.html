@@ -3,126 +3,31 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>微信分享测试</title>
-		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script async src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script>
-			wx.config({
-		        debug: false,
-		        appId: '',
-		        timestamp: 1505806165,
-		        nonceStr: '1067822350',
-		        signature: 'fad39839301345ff624417492bab01b17219c3d1',
-		        jsApiList: [
-		        'checkJsApi',
-		        'onMenuShareTimeline',
-		        'onMenuShareAppMessage',
-		        'onMenuShareQQ',
-		        'onMenuShareWeibo',
-		        'hideMenuItems',
-		        'showMenuItems',
-		        'hideAllNonBaseMenuItem',
-		        'showAllNonBaseMenuItem',
-		        'translateVoice',
-		        'startRecord',
-		        'stopRecord',
-		        'onRecordEnd',
-		        'playVoice',
-		        'pauseVoice',
-		        'stopVoice',
-		        'uploadVoice',
-		        'downloadVoice',
-		        'chooseImage',
-		        'previewImage',
-		        'uploadImage',
-		        'downloadImage',
-		        'getNetworkType',
-		        'openLocation',
-		        'getLocation',
-		        'hideOptionMenu',
-		        'showOptionMenu',
-		        'closeWindow',
-		        'scanQRCode',
-		        'chooseWXPay',
-		        'openProductSpecificView',
-		        'addCard',
-		        'chooseCard',
-		        'openCard'
-		      ]
-		    });
-		
-		
-		
-		    var local=window.location.href;
-		    window.shareData = {  
-		       "imgUrl":"http://wyy.photowww.com//183new/XTApp/sjzlwxc/sjzlwxc20170917006/XT/10.jpg", 
-		        "timeLineLink":local,
-		        "sendFriendLink": local,
-		        "weiboLink":local,
-		        "tTitle": "我们结婚啦～李清波&宋效果",
-		        "tContent": " 李清波&宋效果\n欢迎各位亲朋好友来参加我们的婚礼。",
-		        "fTitle": "我们结婚了～",
-		        "fContent": "李清波&宋效果\n欢迎各位亲朋好友来参加我们的婚礼。",
-		        "wContent": " 李清波&宋效果\n欢迎各位亲朋好友来参加我们的婚礼。" 
-		    };
-		
-		
-		
-		
-		
-		
-		
-		    wx.ready(function () {
-		     wx.onMenuShareTimeline({
-		    title: window.shareData.tTitle, // 分享标题
-		    link: window.shareData.sendFriendLink, // 分享链接
-		    imgUrl: window.shareData.imgUrl, // 分享图标
-		    success: function () { 
-		        // 用户确认分享后执行的回调函数
-		    },
-		    cancel: function () { 
-		        // 用户取消分享后执行的回调函数
-		    }
-		});
-		
-		
-		wx.onMenuShareAppMessage({
-		    title:window.shareData.tTitle, // 分享标题
-		    desc: window.shareData.tContent, // 分享描述
-		    link: window.shareData.sendFriendLink, // 分享链接
-		    imgUrl: window.shareData.imgUrl, // 分享图标
-		    type: '', // 分享类型,music、video或link，不填默认为link
-		    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-		    success: function () { 
-		        // 用户确认分享后执行的回调函数
-		    },
-		    cancel: function () { 
-		        // 用户取消分享后执行的回调函数
-		    }
-		});
-		
-		wx.onMenuShareQQ({
-		    title: window.shareData.tTitle, // 分享标题
-		    desc:window.shareData.tContent, // 分享描述
-		    link:window.shareData.sendFriendLink, // 分享链接
-		    imgUrl: window.shareData.imgUrl, // 分享图标
-		    success: function () { 
-		       // 用户确认分享后执行的回调函数
-		    },
-		    cancel: function () { 
-		       // 用户取消分享后执行的回调函数
-		    }
-		});
-		    document.getElementById("myAudio").play();
-		
-		
-		
-		 })
-		
-		
-		
-		 wx.error(function(res){
-		 
-		    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
-		});
+			window.offline = false;
+        window.isDebug = false;
+        window.formHost = "//api.s.wps.cn";
+        window.reportHost = "//s.wps.cn";
+        window.baseUrl = "coh5.cn/p";
+        window.jsonUrl = "//h5.z211.top/p/4d24f32d_c0c2.json";
+        window.resBase = "//h5.z211.top/static";
+        window.linkCheck = "//s.wps.cn/service";
+        window.publishDocType = "user";
+        window.scriptChart = "//h5.z211.top/static/lib/chart.min.js";
+        window.scriptEffect = "//h5.z211.top/static/lib/proton-1.0.0.js";
+        window.scriptPhotoset = "//h5.z211.top/static/lib/flux.min.js";
+        window.wechatAppId="";
+        try{
+            window.publishInfo =  {"docId":"4d24f32d","publishId":"4d24f32d","latestId":"c0c2","cover":"//b.h5.wps.cn/uImage/191252083/1505098934586_719016aa.gif%40base%40tag%3DimgScale%26h%3D460%26w%3D460%26c%3D1%26f%3D1%26cox%3D0%26coy%3D0","title":"【瑞金麟9.22国庆中秋感恩回馈内购会","desc":"【瑞金麟9.22国庆中秋感恩回馈内购会","bgMusic":"//a.h5.wps.cn/sysMusic/1023/%E5%8A%A8%E6%84%9F%20%E7%AB%A5%E8%AF%9D%E4%B9%A6.mp3","activeRange":false,"activeRangeEnd":0,"hasChart":false,"hasEffect":false,"hasWechat":false,"hasPhotoset":false,"hasForm":false,"logoUrl":"","baseUrl":"coh5.cn/p","version":"2","staticBase":"//h5.z211.top/static/p/20170919120132","domain":"coh5.cn"};
+            window._i18Map = JSON.parse('{"itemRequired":"为必填项","wrongPhoneFormat":"电话格式不对","wrongMailFormat":"邮件格式不对","allItemEmpty":"请填写信息","submit_ok":"提交成功","submit_failed":"提交失败，请重试","alreadySubmitted":"已经提交过了，亲","form_submit_end":"当前表单已截止提交","form_open_in_wechat":"请在微信中打开使用","form_submit_within_interval":"请不要重复提交","ok":"好的","second":"秒","send_verify_code_failed":"不能获取验证码","verifyCodeInvalid":"验证码无效","copy":"复制链接分享","scanCode":"微信扫一扫分享","paySuccTip":"&nbsp;&nbsp;&nbsp;&nbsp;温馨提示：已画册已经放在“我的画册”里。建议您克隆一份后再修改，以防误删、误改后无法恢复。"}');
+        }catch(e){
+            console.error(e);
+        }
+        window.fid="4d24f32d";
+        window._i18nProp = function(key){
+            return (window._i18Map||{})[key];
+        };
 		</script>
 	</head>
 	<body>
